@@ -6,6 +6,6 @@ make CROSS_COMPILE=aarch64-linux-gnu- rock-3a-rk3568_defconfig
 make CROSS_COMPILE=aarch64-linux-gnu- BL31=../rkbin/bin/rk35/rk3568_bl31_v1.32.elf  spl/u-boot-spl.bin u-boot.dtb u-boot.itb
 ./tools/mkimage -n rk3568 -T rksd -d ../rkbin/bin/rk35/rk3568_ddr_1056MHz_v1.10.bin:spl/u-boot-spl.bin idbloader.img
 echo "==============================================================="
-echo "dd idbloader.img to seek=64, u-boot.itb to seek=16384
+echo "dd idbloader.img to seek=64, u-boot.itb to seek=16384"
 echo "==============================================================="
 exit 0
